@@ -33,6 +33,7 @@ You can run the STOOP application locally on your Mac using the pre-installed Py
 - **`app.js`**: Core frontend application manager controlling routing, kudos persistence, workout loggers, HTML5 GPS route tracking, canvas radar fallback simulations, and AI Coach dispatches.
 - **`server.py`**: Python 3 request handler serving static assets, logging queries to local databases (`queries.json` and `onboarding.json`), and routing requests securely to Gmail SMTP and Gemini APIs.
 - **`config.json`**: Central unified configuration file for mail credentials and developer API keys (Auto-created on start).
+- **`assets/`**: Generated adult lifestyle photography used by the landing page, feature cards, onboarding, dashboard, club, support, and activity feed.
 
 ---
 
