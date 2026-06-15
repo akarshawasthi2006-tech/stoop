@@ -261,11 +261,12 @@ a {
    ========================================================================== */
 .hero {
     display: flex;
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 100px 24px;
+    padding: 88px 24px 110px;
     align-items: center;
     gap: 48px;
+    perspective: 1400px;
 }
 
 .hero-content {
@@ -312,6 +313,92 @@ a {
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 0;
+}
+
+.hero-scene {
+    position: relative;
+    width: min(620px, 100%);
+    aspect-ratio: 16 / 11;
+    transform: rotateY(-7deg) rotateX(2deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.hero-scene:hover {
+    transform: rotateY(-2deg) rotateX(0deg) translateY(-6px);
+}
+
+.hero-group-photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 36px 80px rgba(0, 0, 0, 0.65), 0 0 50px rgba(252, 97, 0, 0.13);
+    transform: translateZ(20px);
+}
+
+.hero-glow {
+    position: absolute;
+    inset: 8% -5% -8% 14%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 230, 118, 0.18), rgba(252, 97, 0, 0.1) 45%, transparent 72%);
+    filter: blur(28px);
+    transform: translateZ(-30px);
+}
+
+.hero-floating-card {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    background: rgba(12, 12, 14, 0.82);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+    transform: translateZ(70px);
+}
+
+.hero-recovery-chip {
+    top: 9%;
+    right: -4%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-social-chip {
+    bottom: 9%;
+    left: -5%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.chip-value {
+    color: var(--green-primary);
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.chip-label {
+    color: var(--text-secondary);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange-primary);
+    box-shadow: 0 0 12px var(--orange-primary);
 }
 
 /* Widgets Styling */
@@ -450,8 +537,19 @@ a {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-md);
-    padding: 32px;
+    padding: 0 24px 28px;
+    overflow: hidden;
     transition: var(--transition-normal);
+}
+
+.feature-photo {
+    width: calc(100% + 48px);
+    height: 190px;
+    margin: 0 -24px 24px;
+    display: block;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+    filter: saturate(0.92) contrast(1.05);
 }
 
 .feature-card:hover {
@@ -467,6 +565,59 @@ a {
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
+}
+
+.view-photo-banner {
+    position: relative;
+    min-height: 270px;
+    display: flex;
+    align-items: center;
+    padding: 48px max(24px, calc((100vw - 1200px) / 2));
+    background-position: center;
+    background-size: cover;
+    border-bottom: 1px solid var(--border-color);
+    isolation: isolate;
+}
+
+.view-photo-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(12, 12, 14, 0.96) 0%, rgba(12, 12, 14, 0.7) 40%, rgba(12, 12, 14, 0.12) 78%);
+}
+
+.onboarding-photo-banner {
+    background-image: url("assets/onboarding-energy-group.png");
+}
+
+.dashboard-photo-banner {
+    background-image: url("assets/dashboard-energy-pair.png");
+}
+
+.support-photo-banner {
+    background-image: url("assets/support-energy-friends.png");
+}
+
+.view-photo-copy {
+    max-width: 560px;
+}
+
+.view-photo-copy .tag {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--green-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.view-photo-copy h2 {
+    max-width: 520px;
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.05;
 }
 
 .orange-icon {
@@ -860,6 +1011,12 @@ a {
     color: white;
 }
 
+.profile-avatar-photo {
+    object-fit: cover;
+    object-position: 68% 34%;
+    border: 2px solid rgba(252, 97, 0, 0.55);
+}
+
 .profile-info h3 {
     font-family: var(--font-display);
     font-size: 16px;
@@ -1066,6 +1223,12 @@ a {
     justify-content: center;
     font-weight: 700;
     color: white;
+}
+
+.act-avatar-photo {
+    object-fit: cover;
+    object-position: center 28%;
+    border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .act-meta h5 {
@@ -1293,15 +1456,28 @@ a {
    VIEW: CLUB PORTAL
    ========================================================================== */
 .club-banner {
-    background: linear-gradient(135deg, rgba(252, 97, 0, 0.3) 0%, rgba(0, 230, 118, 0.1) 100%), #151518;
+    position: relative;
+    isolation: isolate;
+    background-image: url("assets/club-energy-community.png");
+    background-position: center;
+    background-size: cover;
     border-bottom: 1px solid var(--border-color);
-    padding: 80px 24px;
-    text-align: center;
+    padding: 95px 24px;
+    text-align: left;
+}
+
+.club-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(12, 12, 14, 0.96), rgba(12, 12, 14, 0.65) 46%, rgba(12, 12, 14, 0.12));
 }
 
 .club-banner-content {
     max-width: 800px;
     margin: 0 auto;
+    padding-right: 34%;
 }
 
 .club-banner-content .tag {
@@ -1876,6 +2052,15 @@ a {
         text-align: center;
         padding: 60px 24px;
     }
+
+    .hero-scene {
+        width: min(700px, 92vw);
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+
+    .hero-scene:hover {
+        transform: translateY(-4px);
+    }
     
     .hero-content h1 {
         font-size: 42px;
@@ -1888,6 +2073,10 @@ a {
     
     .hero-buttons {
         justify-content: center;
+    }
+
+    .club-banner-content {
+        padding-right: 24%;
     }
 }
 
@@ -1948,6 +2137,79 @@ a {
     .footer-links {
         flex-wrap: wrap;
         gap: 32px;
+    }
+
+    .hero {
+        gap: 54px;
+    }
+
+    .hero-floating-card {
+        transform: none;
+    }
+
+    .hero-recovery-chip {
+        right: 2%;
+    }
+
+    .hero-social-chip {
+        left: 2%;
+    }
+
+    .view-photo-banner {
+        min-height: 230px;
+        background-position: 62% center;
+    }
+
+    .view-photo-banner::before {
+        background: linear-gradient(90deg, rgba(12, 12, 14, 0.94), rgba(12, 12, 14, 0.58) 65%, rgba(12, 12, 14, 0.28));
+    }
+
+    .club-banner {
+        background-position: 64% center;
+    }
+
+    .club-banner-content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-scene {
+        width: 100%;
+    }
+
+    .hero-floating-card {
+        padding: 8px 11px;
+    }
+
+    .hero-recovery-chip {
+        top: 4%;
+    }
+
+    .hero-social-chip {
+        bottom: 4%;
+    }
+
+    .chip-value {
+        font-size: 19px;
+    }
+
+    .view-photo-banner {
+        min-height: 210px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+
+    .view-photo-copy h2 {
+        font-size: 31px;
     }
 }
 
@@ -2081,4 +2343,3 @@ a {
 .tr-val {
     letter-spacing: -0.5px;
 }
-
