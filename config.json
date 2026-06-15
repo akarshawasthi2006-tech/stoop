@@ -1,0 +1,9 @@
+{
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 465,
+    "smtp_user": "",
+    "smtp_pass": "",
+    "web3forms_key": "",
+    "gemini_key": "",
+    "google_maps_key": ""
+}
