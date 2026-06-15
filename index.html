@@ -54,35 +54,21 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <!-- Dashboard Visual Widget Preview -->
-                    <div class="widget preview-recovery-card">
-                        <div class="preview-header">
-                            <span class="athlete-name">Cristiano Ronaldo</span>
-                            <span class="athlete-status">Optimal Recovery</span>
+                    <!-- Hero Image - Woman running at sunset -->
+                    <div class="hero-scene">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=620&h=427&fit=crop" alt="Athlete running at sunset" class="hero-group-photo">
+                        <div class="hero-glow"></div>
+                        
+                        <!-- Floating Recovery Card -->
+                        <div class="hero-floating-card hero-recovery-chip">
+                            <span class="chip-value" style="color: var(--green-primary);">85%</span>
+                            <span class="chip-label">Recovery Score</span>
                         </div>
-                        <div class="preview-circle-container">
-                            <svg class="progress-ring-svg" width="160" height="160">
-                                <circle class="progress-ring-bg" stroke="#1c1c1e" stroke-width="12" fill="transparent" r="70" cx="80" cy="80" />
-                                <circle class="progress-ring-bar active-green" stroke="#00E676" stroke-width="12" stroke-linecap="round" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="439.8" stroke-dashoffset="65" />
-                            </svg>
-                            <div class="preview-circle-text">
-                                <span class="preview-number">85%</span>
-                                <span class="preview-label">Recovery</span>
-                            </div>
-                        </div>
-                        <div class="preview-metrics">
-                            <div class="p-metric">
-                                <span class="m-val">9.2h</span>
-                                <span class="m-lbl">Sleep</span>
-                            </div>
-                            <div class="p-metric">
-                                <span class="m-val">17.8</span>
-                                <span class="m-lbl">Strain</span>
-                            </div>
-                            <div class="p-metric">
-                                <span class="m-val">68 ms</span>
-                                <span class="m-lbl">HRV</span>
-                            </div>
+                        
+                        <!-- Floating Social Chip -->
+                        <div class="hero-floating-card hero-social-chip">
+                            <div class="live-dot"></div>
+                            <span style="color: var(--text-primary);">Live on Leaderboard</span>
                         </div>
                     </div>
                 </div>
@@ -97,6 +83,7 @@
                 
                 <div class="features-grid">
                     <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=190&fit=crop" alt="Community cycling group" class="feature-photo">
                         <div class="feature-icon orange-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         </div>
@@ -105,6 +92,7 @@
                     </div>
 
                     <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1576091160550-112173f7f869?w=400&h=190&fit=crop" alt="Smartwatch vitals tracking" class="feature-photo">
                         <div class="feature-icon green-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
                         </div>
@@ -113,6 +101,7 @@
                     </div>
 
                     <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=190&fit=crop" alt="Athletes on track" class="feature-photo">
                         <div class="feature-icon blue-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                         </div>
@@ -125,6 +114,14 @@
 
         <!-- VIEW 2: ONBOARDING (Strava-style flow) -->
         <section id="view-onboarding" class="app-view">
+            <div class="view-photo-banner onboarding-photo-banner" style="background-image: url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&h=270&fit=crop');">
+                <div class="view-photo-banner::before"></div>
+                <div class="view-photo-copy">
+                    <span class="tag">⚡ START YOUR STOOP JOURNEY</span>
+                    <h2>Complete Your Athlete Onboarding in 5 Steps</h2>
+                </div>
+            </div>
+
             <div class="onboarding-container">
                 <!-- Progress Header -->
                 <div class="onboarding-progress-header">
@@ -320,6 +317,14 @@
 
         <!-- VIEW 3: DASHBOARD (WHOOP Vitals + Strava Feed) -->
         <section id="view-dashboard" class="app-view">
+            <div class="view-photo-banner dashboard-photo-banner" style="background-image: url('https://images.unsplash.com/photo-1576091160971-112ab8335e91?w=1200&h=270&fit=crop');">
+                <div class="view-photo-banner::before"></div>
+                <div class="view-photo-copy">
+                    <span class="tag">📊 YOUR PERFORMANCE HUB</span>
+                    <h2>Track, Compete & Recover with Real-Time Vitals</h2>
+                </div>
+            </div>
+
             <div class="dashboard-layout">
                 
                 <!-- Left Sidebar: WHOOP Vitals, Recovery Dials, & AI Coach -->
@@ -338,7 +343,7 @@
                         <div class="gauge-container">
                             <svg class="progress-ring-svg" width="140" height="140">
                                 <circle class="progress-ring-bg" stroke="#1c1c1e" stroke-width="10" fill="transparent" r="60" cx="70" cy="70" />
-                                <circle class="progress-ring-bar active-green" id="recovery-circle" stroke="#00E676" stroke-width="10" stroke-linecap="round" fill="transparent" r="60" cx="70" cy="70" stroke-dasharray="377" stroke-dashoffset="60" />
+                                <circle class="progress-ring-bar active-green" id="recovery-circle" stroke="#00E676" stroke-width="10" stroke-linecap="round" fill="transparent" r="60" cx="70" cy="70" stroke-dasharray="251.2" stroke-dashoffset="37.68"></circle>
                             </svg>
                             <div class="gauge-center-text">
                                 <span class="gauge-number" id="recovery-number">84%</span>
@@ -363,7 +368,7 @@
                         <div class="gauge-container">
                             <svg class="progress-ring-svg" width="140" height="140">
                                 <circle class="progress-ring-bg" stroke="#1c1c1e" stroke-width="10" fill="transparent" r="60" cx="70" cy="70" />
-                                <circle class="progress-ring-bar active-blue" id="sleep-circle" stroke="#2D9CDB" stroke-width="10" stroke-linecap="round" fill="transparent" r="60" cx="70" cy="70" stroke-dasharray="377" stroke-dashoffset="37.7" />
+                                <circle class="progress-ring-bar active-blue" id="sleep-circle" stroke="#2D9CDB" stroke-width="10" stroke-linecap="round" fill="transparent" r="60" cx="70" cy="70" stroke-dasharray="251.2" stroke-dashoffset="25.12"></circle>
                             </svg>
                             <div class="gauge-center-text">
                                 <span class="gauge-number" id="sleep-number">90%</span>
@@ -393,7 +398,7 @@
                             <h4 style="margin-bottom:0;">STOOP AI Coach</h4>
                             <span class="badge-green" style="font-size:10px;text-transform:uppercase;background:rgba(0, 230, 118, 0.08);">Gemini 2.5</span>
                         </div>
-                        <p style="font-size:12px;color:var(--text-secondary);align-self:flex-start;margin-bottom:14px;line-height:1.4;">Evaluate recovery and build workout strain targets in real-time.</p>
+                        <p style="font-size:12px;color:var(--text-secondary);align-self:flex-start;margin-bottom:14px;line-height:1.4;">Evaluate recovery and build workout strain targets in real-time using Gemini AI models.</p>
                         
                         <button class="btn btn-primary btn-block" id="btn-consult-ai" style="background-color: var(--green-primary); box-shadow: 0 4px 14px var(--green-glow);">Consult AI Coach</button>
                         
@@ -402,7 +407,7 @@
                             <span style="font-size:12px;color:var(--green-primary);display:block;margin-top:8px;">Analyzing physiological metrics...</span>
                         </div>
                         
-                        <div id="ai-coach-output" class="ai-coach-response-box" style="display: none; margin-top: 16px; width:100%; border-top: 1px solid var(--border-color); padding-top:14px; font-size:12px; line-height:1.5; color:var(--text-secondary); max-height: 280px; overflow-y: auto;">
+                        <div id="ai-coach-output" class="ai-coach-response-box" style="display: none; margin-top: 16px; width:100%; border-top: 1px solid var(--border-color); padding-top:14px; font-size:12px; color:var(--text-secondary); line-height:1.6;">
                             <!-- Gemini output loaded here -->
                         </div>
                     </div>
@@ -415,10 +420,10 @@
                     <div class="widget live-tracker-widget" style="border-top: 3px solid var(--orange-primary);">
                         <div class="tracker-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
                             <h4 style="margin-bottom:0;font-family:var(--font-display);">Live GPS Route Tracker</h4>
-                            <span class="badge" id="gps-status-badge" style="margin-bottom:0; font-size:10px; background:rgba(255,255,255,0.05); color:var(--text-secondary); border-color:var(--border-color); padding:3px 8px;">GPS Offline</span>
+                            <span class="badge" id="gps-status-badge" style="margin-bottom:0; font-size:10px; background:rgba(255,255,255,0.05); color:var(--text-secondary); border-color:var(--border-color);">Idle</span>
                         </div>
                         
-                        <div class="tracker-vitals-row" style="display:grid; grid-template-columns: repeat(3, 1fr); text-align:center; padding:12px; background:rgba(255,255,255,0.02); border:1px solid var(--border-color); border-radius:8px; margin-bottom:16px;">
+                        <div class="tracker-vitals-row" style="display:grid; grid-template-columns: repeat(3, 1fr); text-align:center; padding:12px; background:rgba(255,255,255,0.02); border:1px solid var(--border-color); border-radius:8px; margin-bottom:12px;">
                             <div class="tr-stat" style="display:flex; flex-direction:column;">
                                 <span class="tr-lbl" style="font-size:10px; color:var(--text-secondary); text-transform:uppercase;">Speed</span>
                                 <span class="tr-val" id="gps-speed" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--orange-primary);">0.0 km/h</span>
@@ -434,13 +439,13 @@
                         </div>
 
                         <!-- Map Viewport -->
-                        <div id="live-route-map" class="map-viewport-box" style="width:100%; height:200px; background:#1C1C1E; border:1px solid var(--border-color); border-radius:8px; position:relative; overflow:hidden; margin-bottom:16px; display:flex; justify-content:center; align-items:center;">
+                        <div id="live-route-map" class="map-viewport-box" style="width:100%; height:200px; background:#1C1C1E; border:1px solid var(--border-color); border-radius:8px; position:relative; overflow:hidden; margin-bottom:12px;">
                             <!-- Fallback Simulator map canvas -->
                             <canvas id="simulator-map-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; display:none;"></canvas>
                             
                             <div class="map-no-key-overlay" id="map-overlay" style="z-index:2; text-align:center; padding:20px;">
                                 <span style="font-size:14px; font-weight:700; color:var(--orange-primary); display:block; margin-bottom:6px;">GPS Tracking Portal</span>
-                                <p class="overlay-sub" style="font-size:11px; color:var(--text-secondary); max-width:280px; margin:0 auto; line-height:1.4;">Start route tracking to initiate the HTML5 location simulation. Input Google Maps API key in Admin settings to render active vector terrains.</p>
+                                <p class="overlay-sub" style="font-size:11px; color:var(--text-secondary); max-width:280px; margin:0 auto; line-height:1.4;">Start route tracking to initiate the HTML5 GeoLocation API.</p>
                             </div>
                         </div>
 
@@ -496,7 +501,7 @@
                     <!-- Club Stats Info widget -->
                     <div class="widget info-widget">
                         <h4>STOOP Retention Flywheel</h4>
-                        <p class="desc-text">Pushing daily vitals creates social accountability. When performance data matches community goals, cancelling the device is painful because you leave the flywheel.</p>
+                        <p class="desc-text">Pushing daily vitals creates social accountability. When performance data matches community goals, cancelling the device is painful because you leave the team.</p>
                         <div class="flywheel-metrics">
                             <div class="f-metric">
                                 <span class="fm-val">97.6%</span>
@@ -514,11 +519,11 @@
 
         <!-- VIEW 4: CLUB PORTAL -->
         <section id="view-club" class="app-view">
-            <div class="club-banner">
-                <div class="club-banner-content">
-                    <span class="tag">STOOP India Community Flywheel</span>
+            <div class="view-photo-banner support-photo-banner" style="background-image: url('https://images.unsplash.com/photo-1552817395-e51df1bdc82f?w=1200&h=270&fit=crop');">
+                <div class="view-photo-banner::before"></div>
+                <div class="view-photo-copy">
+                    <span class="tag">🏆 COMMUNITY POWER</span>
                     <h1>STOOP Club India (#1659984)</h1>
-                    <p>The central hub for corporate leaders, elite endurance athletes, and recovery enthusiasts across India. Sync your vitals, complete monthly missions, and challenge the team.</p>
                 </div>
             </div>
 
@@ -598,7 +603,7 @@
             <div class="support-container">
                 <div class="support-header">
                     <h2>Submit a Query to STOOP Support</h2>
-                    <p>Have questions about device deliveries, corporate fitness programs, or vital tracking configurations? Submit your query here, and it will be sent directly to our admin team's inbox at <strong>thisisakarsh02@gmail.com</strong>.</p>
+                    <p>Have questions about device deliveries, corporate fitness programs, or vital tracking configurations? Submit your query here, and it will be sent directly to our admin team.</p>
                 </div>
 
                 <form id="support-form" class="support-form-element">
@@ -820,18 +825,18 @@
             </div>
             <div class="footer-links">
                 <div class="footer-col">
-                    <h4>Product</h4>
+                    <h3>Product</h3>
                     <a href="#onboarding">Onboarding</a>
                     <a href="#dashboard">Live Vitals Dashboard</a>
                     <a href="#club">India Club (#1659984)</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Entity Partners</h4>
+                    <h3>Entity Partners</h3>
                     <span class="footer-entity">Net Distribution Services Pvt. Ltd.</span>
                     <span class="footer-entity">WHOOP Fitness Data India Pvt. Ltd.</span>
                 </div>
                 <div class="footer-col">
-                    <h4>Support Portal</h4>
+                    <h3>Support Portal</h3>
                     <a href="#support">Contact Support</a>
                     <span class="footer-email">Target: thisisakarsh02@gmail.com</span>
                 </div>
