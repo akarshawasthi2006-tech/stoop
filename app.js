@@ -319,8 +319,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let activities = [
         {
             id: "act-1",
-            athleteName: "Virat Kohli",
-            athleteAvatar: "V",
+            athleteName: "Maya Rao",
+            athleteAvatar: "M",
+            athleteImage: "assets/runner-woman.png",
             tracker: "WHOOP Strap",
             timeAgo: "2 hours ago",
             title: "Hard Cardiovascular Cardio intervals in Mumbai gym",
@@ -333,8 +334,9 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: "act-2",
-            athleteName: "Neeraj Chopra",
-            athleteAvatar: "N",
+            athleteName: "Arjun Mehta",
+            athleteAvatar: "A",
+            athleteImage: "assets/dashboard-energy-pair.png",
             tracker: "Garmin Peak",
             timeAgo: "4 hours ago",
             title: "Restorative morning run in Patiala stadium",
@@ -347,8 +349,9 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             id: "act-3",
-            athleteName: "Cristiano Ronaldo",
-            athleteAvatar: "C",
+            athleteName: "Zara Khan",
+            athleteAvatar: "Z",
+            athleteImage: "assets/recovery-woman.png",
             tracker: "WHOOP Strap",
             timeAgo: "1 day ago",
             title: "Recovery active spin & hydrotherapy session",
@@ -370,6 +373,9 @@ document.addEventListener("DOMContentLoaded", () => {
         activities.forEach(activity => {
             const card = document.createElement("div");
             card.className = "activity-card";
+            const avatarHtml = activity.athleteImage
+                ? `<img class="act-avatar act-avatar-photo" src="${activity.athleteImage}" alt="">`
+                : `<div class="act-avatar">${activity.athleteAvatar}</div>`;
             
             const distanceHtml = activity.distance ? `
                 <div class="stat-item">
@@ -380,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             card.innerHTML = `
                 <div class="activity-card-header">
-                    <div class="act-avatar">${activity.athleteAvatar}</div>
+                    ${avatarHtml}
                     <div class="act-meta">
                         <h5>${activity.athleteName}</h5>
                         <span class="act-time">${activity.timeAgo} • via ${activity.tracker}</span>
